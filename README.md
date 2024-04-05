@@ -1,6 +1,5 @@
 # Tomcat installation on EC2 instance
-- Follow this video lecture in Valaxy Technologies **[YouTube Channel](https://youtu.be/68WNroQBUts)**  
-- Complete DevOps Project course on [Udemy](https://www.udemy.com/course/valaxy-devops/?referralCode=8147A5CF4C8C7D9E253F)  
+
 ### Pre-requisites
 1. EC2 instance with Java 11
 ### Install Apache Tomcat
@@ -8,9 +7,7 @@
    > Note: Make sure you change `<version>` with the tomcat version which you download. 
    ```sh 
    # Create tomcat directory
-   cd /opt
-   wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
-   tar -xvzf /opt/apache-tomcat-<version>.tar.gz
+   Run the tomcat script file from requirements.
    ```
 1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
    ```sh
@@ -25,6 +22,7 @@
    ln -s /opt/apache-tomcat-<version>/bin/shutdown.sh /usr/local/bin/tomcatdown
    tomcatup
    ```
+   After this we can access tomcat with root user only
   #### Check point :
 access tomcat application from browser on port 8080  
  - http://<Public_IP>:8080
