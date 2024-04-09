@@ -23,7 +23,7 @@ pipeline {
         stage('Deploying the war file into the Tomcat Server'){
             steps {
                 echo "Deploying it to the Server"
-                deploy adapters: [tomcat9(credentialsId: 'admin', path: '', url: 'http://13.42.38.111:8080/')], contextPath: 'Hello-World', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'admin', path: '', url: "${env.tomcat_url}")], contextPath: 'Hello-World', war: '**/*.war'
             }
         }
     }
