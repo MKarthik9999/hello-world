@@ -50,7 +50,9 @@ At the time of writing this lecture below 2 files are updated.
    ```sh 
    /opt/tomcat/webapps/host-manager/META-INF/context.xml
    /opt/tomcat/webapps/manager/META-INF/context.xml
-   
+
+   <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+  
    # Restart tomcat services
    tomcatdown  
    tomcatup
